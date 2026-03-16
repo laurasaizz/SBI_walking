@@ -7,7 +7,7 @@ xml_setup = "scaling.xml" # Die XML, die du oben gepostet hast
 model_out = "Rajagopal2016_scaled.osim"
 
 # Sampling Werte, erstmal provisorisch
-new_mass = 85.0
+new_mass = 85
 s_factor = 1.10 # 10% größer
 force_factor = (new_mass/75.337)**(2/3) #Begründung: Muskelkraft = constante1 * querschnitt, querschnitt = constante2 * r^2, r = dichtefaktor * masse^{1/3}
 
