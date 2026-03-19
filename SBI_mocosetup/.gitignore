@@ -1,1 +1,4 @@
 *.sto
+scaled_motion.mot
+temp_results.osim
+test_human

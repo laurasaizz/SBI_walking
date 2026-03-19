@@ -26,7 +26,7 @@ def leg_length(model, state):
 def generate_single_sample(model_path, mot_path):
 
     model = osim.Model(model_path)
-    state = model.initSystem()
+    state:osim.State = model.initSystem()
 
     table = osim.TimeSeriesTable(mot_path)
 
