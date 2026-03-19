@@ -20,15 +20,19 @@ def sample_human(name_of_return_file: str):
     new_mass = np.exp(ln_w)
     force_factor = (new_mass/75.337)**(2/3) #explaination: muscle force = constant1 * area of muscle, area of muscle = constant2 * r^2, r = density factor * mass^{1/3}
     height_factor = new_height/1.7
+    print("height_factor:", height_factor)
+    
     #loading tool
-    scale_tool = osm.ScaleTool(xml_setup)
+    scale_tool = osm.ScaleTool()
 
     #default settings for the scale tool to only scale based on new mass and height
     scale_tool.getGenericModelMaker().setModelFileName(model_in)
     scale_tool.getMarkerPlacer().setApply(False) 
     scaler = scale_tool.getModelScaler()
     scaler.setApply(True)
-    scaler.setScalingOrder(osm.ArrayStr("manualScale", 1))
+    order = osm.ArrayStr()
+    order.append("manualScale")
+    scaler.setScalingOrder(order)
     scale_tool.setSubjectMass(new_mass)
     scaler.setOutputModelFileName("temp_result.osim")
 
@@ -42,7 +46,8 @@ def sample_human(name_of_return_file: str):
         body_name = body_set.get(i).getName()
         new_scale = osm.Scale()
         new_scale.setName(body_name)
-        new_scale.setScaleFactors(osm.Vec3(height_factor))
+        new_scale.setSegmentName(body_name)
+        new_scale.setScaleFactors(osm.Vec3(height_factor, height_factor, height_factor)) #uniform scaling in all directions
         new_scale.setApply(True)
         scale_set.adoptAndAppend(new_scale)
 
