@@ -119,4 +119,4 @@ def run_moco_simulation():
         solution.unseal()
 
     print("Fertig. Lösung wird übergeben.")
-    return solution
+    return solution, model

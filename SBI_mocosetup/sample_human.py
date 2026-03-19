@@ -2,7 +2,7 @@ import opensim as osm
 import numpy as np
 #takes as parameters the name of the output file, prints the scaled model as a osim file into the folder and returns the model internally
 def sample_human(name_of_return_file: str):
-    model_in = "gait2392_simbody.osim" #standard model
+    model_in = "gait2392_simbody.osim" #standard model.osim" #standard model
     xml_setup = "scaling.xml" #scaling default settings
     model_out = name_of_return_file
 
@@ -20,15 +20,18 @@ def sample_human(name_of_return_file: str):
     new_mass = np.exp(ln_w)
     force_factor = (new_mass/75.337)**(2/3) #explaination: muscle force = constant1 * area of muscle, area of muscle = constant2 * r^2, r = density factor * mass^{1/3}
     height_factor = new_height/1.7
+    
     #loading tool
-    scale_tool = osm.ScaleTool(xml_setup)
+    scale_tool = osm.ScaleTool()
 
     #default settings for the scale tool to only scale based on new mass and height
     scale_tool.getGenericModelMaker().setModelFileName(model_in)
     scale_tool.getMarkerPlacer().setApply(False) 
     scaler = scale_tool.getModelScaler()
     scaler.setApply(True)
-    scaler.setScalingOrder(osm.ArrayStr("manualScale", 1))
+    order = osm.ArrayStr()
+    order.append("manualScale")
+    scaler.setScalingOrder(order)
     scale_tool.setSubjectMass(new_mass)
     scaler.setOutputModelFileName("temp_result.osim")
 
@@ -42,7 +45,8 @@ def sample_human(name_of_return_file: str):
         body_name = body_set.get(i).getName()
         new_scale = osm.Scale()
         new_scale.setName(body_name)
-        new_scale.setScaleFactors(osm.Vec3(height_factor))
+        new_scale.setSegmentName(body_name)
+        new_scale.setScaleFactors(osm.Vec3(height_factor, height_factor, height_factor)) #uniform scaling in all directions
         new_scale.setApply(True)
         scale_set.adoptAndAppend(new_scale)
 
@@ -65,55 +69,8 @@ def sample_human(name_of_return_file: str):
         new_force = old_force * force_factor
         musc.setMaxIsometricForce(new_force)
 
-
-    # --- BODENKONTAKT HINZUFÜGEN ---
-    ground = final_model.getGround()
-
-    # 1. Der Boden (HalfSpace)
-    floor = osm.ContactHalfSpace()
-    floor.setName("floor")
-    floor.connectSocket_frame(ground)
-    # Rotation um x (-90 grad), damit Normalenvektor nach oben zeigt
-    floor.set_orientation(osm.Vec3(-1.5708, 0, 0)) 
-    final_model.addContactGeometry(floor)
-
-    # 2. Kontakt-Parameter (für Moco optimiert)
-    stiffness = 1.0e7    # Wie hart ist der Boden
-    dissipation = 2.0    # Dämpfung (verhindert unendliches Prellen)
-    friction = 0.8       # Reibung
-
-    # 3. Schleife für die Füße (Rechts 'r' und Links 'l')
-    for side in ['r', 'l']:
-        # Wir platzieren Kugeln an der Ferse (calcn) und den Zehen (toes)
-        body_names = [f'calcn_{side}', f'toes_{side}']
-        # Beispiel-Offsets (muss je nach Modell ggf. leicht angepasst werden)
-        offsets = [osm.Vec3(0, 0, 0), osm.Vec3(0.1, 0, 0)] 
-        
-        for i, b_name in enumerate(body_names):
-            body = final_model.getBodySet().get(b_name)
-            
-            # Kugel-Geometrie
-            sphere = osm.ContactSphere(0.05, offsets[i], body)
-            sphere.setName(f'sphere_{b_name}')
-            final_model.addContactGeometry(sphere)
-            
-            # Die eigentliche Kraft (SmoothSphereHalfSpaceForce)
-            force = osm.SmoothSphereHalfSpaceForce(f'force_{b_name}', sphere, floor)
-            force.set_stiffness(stiffness)
-            force.set_dissipation(dissipation)
-            force.set_static_friction(friction)
-            force.set_dynamic_friction(friction)
-            force.set_viscous_friction(friction)
-            
-            final_model.addComponent(force)
-
-
-   
-        
-    final_model.finalizeConnections()
     final_model.printToXML(name_of_return_file)
     return final_model, new_height
-
 
 def adjust_pelvis_ty_by_height(
     input_mot: str,

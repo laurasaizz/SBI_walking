@@ -71,7 +71,52 @@ def sample_human(name_of_return_file: str):
         musc.setMaxIsometricForce(new_force)
 
     final_model.printToXML(name_of_return_file)
-    return final_model
+    return final_model, new_height
+
+def adjust_pelvis_ty_by_height(
+    input_mot: str,
+    sampled_height: float,
+    output_mot: str,
+    reference_height: float = 1.70,
+    pelvis_ty_column: str = "pelvis_ty",
+) -> str:
+
+    if sampled_height <= 0:
+        raise ValueError("sampled_height muss > 0 sein.")
+    if reference_height <= 0:
+        raise ValueError("reference_height muss > 0 sein.")
+
+    table = osm.TimeSeriesTable(input_mot)
+    labels = table.getColumnLabels()
+
+    # Robust gegen unterschiedliche Python-Bindings:
+    if isinstance(labels, (tuple, list)):
+        label_list = list(labels)
+    else:
+        label_list = [labels.get(i) for i in range(labels.size())]
+
+    if pelvis_ty_column not in label_list:
+        raise ValueError(
+            f"Spalte '{pelvis_ty_column}' nicht gefunden.\n"
+            f"Vorhandene Spalten: {label_list}"
+        )
+
+    scale_factor = sampled_height / reference_height
+
+    col = table.updDependentColumn(pelvis_ty_column)
+    for i in range(col.size()):
+        col[i] = col[i] * scale_factor
+
+    # inDegrees-Metadatum sicher setzen
+    try:
+        table.removeTableMetaDataKey("inDegrees")
+    except Exception:
+        pass
+
+    table.addTableMetaDataString("inDegrees", "yes")
+
+    osm.STOFileAdapter.write(table, output_mot)
+    return output_mot
 
 
 

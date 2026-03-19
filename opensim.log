@@ -1483,3 +1483,241 @@
 [2026-03-18 17:35:34.507] [info] Wrote model file 'temp_result.osim' from model.
 [2026-03-18 17:35:34.553] [info] Loaded model model from file temp_result.osim
 [2026-03-18 17:35:34.927] [info] Loaded model model from file model_9.osim
+[2026-03-19 08:13:04.375] [info] Updating Model file from 40000 to latest format...
+[2026-03-19 08:13:04.448] [info] Loaded model Rajagopal2016 from file Rajagopal2016.osim
+[2026-03-19 08:13:04.958] [info] Processing subject ...
+[2026-03-19 08:13:04.958] [info] Step 1: Loading generic model
+[2026-03-19 08:13:04.973] [info] Updating Model file from 40000 to latest format...
+[2026-03-19 08:13:05.006] [info] Loaded model Rajagopal2016 from file c:\MLprojects\sbi for walking\Rajagopal2016.osim
+[2026-03-19 08:13:05.397] [info] Step 2: Scaling generic model
+[2026-03-19 08:13:05.558] [info] Wrote model file 'temp_result.osim' from model.
+[2026-03-19 08:13:05.622] [info] Loaded model model from file temp_result.osim
+[2026-03-19 08:13:06.365] [info] Adding reserve actuators with an optimal force of 250.0...
+[2026-03-19 08:13:06.411] [info] Added 20 reserve actuator(s), for each of the following coordinates:
+[2026-03-19 08:13:06.411] [info]   /jointset/ground_pelvis/pelvis_tilt
+[2026-03-19 08:13:06.411] [info]   /jointset/ground_pelvis/pelvis_list
+[2026-03-19 08:13:06.411] [info]   /jointset/ground_pelvis/pelvis_rotation
+[2026-03-19 08:13:06.411] [info]   /jointset/ground_pelvis/pelvis_tx
+[2026-03-19 08:13:06.411] [info]   /jointset/ground_pelvis/pelvis_ty
+[2026-03-19 08:13:06.411] [info]   /jointset/ground_pelvis/pelvis_tz
+[2026-03-19 08:13:06.411] [info]   /jointset/hip_r/hip_flexion_r
+[2026-03-19 08:13:06.411] [info]   /jointset/hip_r/hip_adduction_r
+[2026-03-19 08:13:06.411] [info]   /jointset/hip_r/hip_rotation_r
+[2026-03-19 08:13:06.411] [info]   /jointset/walker_knee_r/knee_angle_r
+[2026-03-19 08:13:06.411] [info]   /jointset/ankle_r/ankle_angle_r
+[2026-03-19 08:13:06.411] [info]   /jointset/subtalar_r/subtalar_angle_r
+[2026-03-19 08:13:06.411] [info]   /jointset/mtp_r/mtp_angle_r
+[2026-03-19 08:13:06.411] [info]   /jointset/hip_l/hip_flexion_l
+[2026-03-19 08:13:06.411] [info]   /jointset/hip_l/hip_adduction_l
+[2026-03-19 08:13:06.411] [info]   /jointset/hip_l/hip_rotation_l
+[2026-03-19 08:13:06.411] [info]   /jointset/walker_knee_l/knee_angle_l
+[2026-03-19 08:13:06.411] [info]   /jointset/ankle_l/ankle_angle_l
+[2026-03-19 08:13:06.411] [info]   /jointset/subtalar_l/subtalar_angle_l
+[2026-03-19 08:13:06.411] [info]   /jointset/mtp_l/mtp_angle_l
+[2026-03-19 08:19:22.770] [info] Updating Model file from 40000 to latest format...
+[2026-03-19 08:19:22.821] [info] Loaded model Rajagopal2016 from file Rajagopal2016.osim
+[2026-03-19 08:19:23.361] [info] Processing subject ...
+[2026-03-19 08:19:23.362] [info] Step 1: Loading generic model
+[2026-03-19 08:19:23.385] [info] Updating Model file from 40000 to latest format...
+[2026-03-19 08:19:23.440] [info] Loaded model Rajagopal2016 from file c:\MLprojects\sbi for walking\Rajagopal2016.osim
+[2026-03-19 08:19:23.975] [info] Step 2: Scaling generic model
+[2026-03-19 08:19:24.172] [info] Wrote model file 'temp_result.osim' from model.
+[2026-03-19 08:19:24.292] [info] Loaded model model from file temp_result.osim
+[2026-03-19 08:19:25.191] [info] Adding reserve actuators with an optimal force of 250.0...
+[2026-03-19 08:19:25.250] [info] Added 20 reserve actuator(s), for each of the following coordinates:
+[2026-03-19 08:19:25.250] [info]   /jointset/ground_pelvis/pelvis_tilt
+[2026-03-19 08:19:25.250] [info]   /jointset/ground_pelvis/pelvis_list
+[2026-03-19 08:19:25.250] [info]   /jointset/ground_pelvis/pelvis_rotation
+[2026-03-19 08:19:25.250] [info]   /jointset/ground_pelvis/pelvis_tx
+[2026-03-19 08:19:25.250] [info]   /jointset/ground_pelvis/pelvis_ty
+[2026-03-19 08:19:25.250] [info]   /jointset/ground_pelvis/pelvis_tz
+[2026-03-19 08:19:25.250] [info]   /jointset/hip_r/hip_flexion_r
+[2026-03-19 08:19:25.250] [info]   /jointset/hip_r/hip_adduction_r
+[2026-03-19 08:19:25.250] [info]   /jointset/hip_r/hip_rotation_r
+[2026-03-19 08:19:25.250] [info]   /jointset/walker_knee_r/knee_angle_r
+[2026-03-19 08:19:25.250] [info]   /jointset/ankle_r/ankle_angle_r
+[2026-03-19 08:19:25.250] [info]   /jointset/subtalar_r/subtalar_angle_r
+[2026-03-19 08:19:25.250] [info]   /jointset/mtp_r/mtp_angle_r
+[2026-03-19 08:19:25.250] [info]   /jointset/hip_l/hip_flexion_l
+[2026-03-19 08:19:25.250] [info]   /jointset/hip_l/hip_adduction_l
+[2026-03-19 08:19:25.250] [info]   /jointset/hip_l/hip_rotation_l
+[2026-03-19 08:19:25.250] [info]   /jointset/walker_knee_l/knee_angle_l
+[2026-03-19 08:19:25.250] [info]   /jointset/ankle_l/ankle_angle_l
+[2026-03-19 08:19:25.250] [info]   /jointset/subtalar_l/subtalar_angle_l
+[2026-03-19 08:19:25.250] [info]   /jointset/mtp_l/mtp_angle_l
+[2026-03-19 08:19:27.457] [info] ========================================================================
+[2026-03-19 08:19:27.457] [info] MocoCasADiSolver starting.
+[2026-03-19 08:19:27.457] [info] Thu Mar 19 08:19:27 2026
+[2026-03-19 08:19:27.457] [info] ------------------------------------------------------------------------
+[2026-03-19 08:19:27.457] [info] Costs: (total: 2)
+[2026-03-19 08:19:27.476] [info]   state_tracking. MocoStateTrackingGoal, enabled: true, mode: cost, weight: 10.0
+[2026-03-19 08:19:27.476] [info]   control_effort. MocoControlGoal, enabled: true, mode: cost, weight: 0.1
+[2026-03-19 08:19:27.476] [info]         control: /forceset/lumbar_ext, weight: 1.0
+[2026-03-19 08:19:27.476] [info]         control: /forceset/lumbar_bend, weight: 1.0
+[2026-03-19 08:19:27.476] [info]         control: /forceset/lumbar_rot, weight: 1.0
+[2026-03-19 08:19:27.476] [info]         control: /forceset/shoulder_flex_r, weight: 1.0
+[2026-03-19 08:19:27.476] [info]         control: /forceset/shoulder_add_r, weight: 1.0
+[2026-03-19 08:19:27.476] [info]         control: /forceset/shoulder_rot_r, weight: 1.0
+[2026-03-19 08:19:27.476] [info]         control: /forceset/elbow_flex_r, weight: 1.0
+[2026-03-19 08:19:27.476] [info]         control: /forceset/pro_sup_r, weight: 1.0
+[2026-03-19 08:19:27.476] [info]         control: /forceset/wrist_flex_r, weight: 1.0
+[2026-03-19 08:19:27.476] [info]         control: /forceset/wrist_dev_r, weight: 1.0
+[2026-03-19 08:19:27.476] [info]         control: /forceset/shoulder_flex_l, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/shoulder_add_l, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/shoulder_rot_l, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/elbow_flex_l, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/pro_sup_l, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/wrist_flex_l, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/wrist_dev_l, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_ground_pelvis_pelvis_tilt, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_ground_pelvis_pelvis_list, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_ground_pelvis_pelvis_rotation, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_ground_pelvis_pelvis_tx, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_ground_pelvis_pelvis_ty, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_ground_pelvis_pelvis_tz, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_hip_r_hip_flexion_r, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_hip_r_hip_adduction_r, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_hip_r_hip_rotation_r, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_walker_knee_r_knee_angle_r, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_ankle_r_ankle_angle_r, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_subtalar_r_subtalar_angle_r, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_mtp_r_mtp_angle_r, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_hip_l_hip_flexion_l, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_hip_l_hip_adduction_l, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_hip_l_hip_rotation_l, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_walker_knee_l_knee_angle_l, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_ankle_l_ankle_angle_l, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_subtalar_l_subtalar_angle_l, weight: 1.0
+[2026-03-19 08:19:27.477] [info]         control: /forceset/reserve_jointset_mtp_l_mtp_angle_l, weight: 1.0
+[2026-03-19 08:19:27.477] [info] Endpoint constraints: none
+[2026-03-19 08:19:27.477] [info] Kinematic constraints: (total: 2)
+[2026-03-19 08:19:27.477] [info]   kinematic_constraint_cid39. MocoConstraintInfo. number of scalar equations: 3. bounds: 0, 0, 0
+[2026-03-19 08:19:27.477] [info]   kinematic_constraint_cid40. MocoConstraintInfo. number of scalar equations: 3. bounds: 0, 0, 0
+[2026-03-19 08:19:27.477] [info] Path constraints: none
+[2026-03-19 08:19:27.477] [info] States: (total: 78)
+[2026-03-19 08:19:27.477] [info]   /jointset/ground_pelvis/pelvis_tilt/value. bounds: [-1.5708, 1.5708]
+[2026-03-19 08:19:27.478] [info]   /jointset/ground_pelvis/pelvis_tilt/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/ground_pelvis/pelvis_list/value. bounds: [-1.5708, 1.5708]
+[2026-03-19 08:19:27.478] [info]   /jointset/ground_pelvis/pelvis_list/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/radioulnar_r/pro_sup_r/value. bounds: [0, 1.5708]
+[2026-03-19 08:19:27.478] [info]   /jointset/ground_pelvis/pelvis_rotation/value. bounds: [-1.5708, 1.5708]
+[2026-03-19 08:19:27.478] [info]   /jointset/radioulnar_r/pro_sup_r/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/ground_pelvis/pelvis_rotation/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/ground_pelvis/pelvis_tx/value. bounds: [-5, 5]
+[2026-03-19 08:19:27.478] [info]   /jointset/ground_pelvis/pelvis_tx/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/elbow_r/elbow_flex_r/value. bounds: [0, 2.618]
+[2026-03-19 08:19:27.478] [info]   /jointset/ground_pelvis/pelvis_ty/value. bounds: [-1, 2]
+[2026-03-19 08:19:27.478] [info]   /jointset/elbow_r/elbow_flex_r/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/ground_pelvis/pelvis_ty/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/radius_hand_l/wrist_flex_l/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/ground_pelvis/pelvis_tz/value. bounds: [-3, 3]
+[2026-03-19 08:19:27.478] [info]   /jointset/ground_pelvis/pelvis_tz/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/ankle_r/ankle_angle_r/value. bounds: [-0.698132, 0.523599]
+[2026-03-19 08:19:27.478] [info]   /jointset/hip_r/hip_adduction_r/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/hip_r/hip_flexion_r/value. bounds: [-0.523599, 2.0944]
+[2026-03-19 08:19:27.478] [info]   /jointset/ankle_r/ankle_angle_r/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/hip_r/hip_flexion_r/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/hip_r/hip_adduction_r/value. bounds: [-0.872665, 0.523599]
+[2026-03-19 08:19:27.478] [info]   /jointset/back/lumbar_rotation/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/hip_r/hip_rotation_r/value. bounds: [-0.698132, 0.698132]
+[2026-03-19 08:19:27.478] [info]   /jointset/hip_r/hip_rotation_r/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/walker_knee_r/knee_angle_r/value. bounds: [0, 2.0944]
+[2026-03-19 08:19:27.478] [info]   /jointset/walker_knee_r/knee_angle_r/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/patellofemoral_r/knee_angle_r_beta/value. bounds: [-99999.9, 99999.9]
+[2026-03-19 08:19:27.478] [info]   /jointset/patellofemoral_r/knee_angle_r_beta/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/hip_l/hip_flexion_l/value. bounds: [-0.523599, 2.0944]
+[2026-03-19 08:19:27.478] [info]   /jointset/subtalar_r/subtalar_angle_r/value. bounds: [-0.349066, 0.349066]
+[2026-03-19 08:19:27.478] [info]   /jointset/hip_l/hip_flexion_l/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/subtalar_r/subtalar_angle_r/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/mtp_r/mtp_angle_r/value. bounds: [-0.523599, 0.523599]
+[2026-03-19 08:19:27.478] [info]   /jointset/mtp_r/mtp_angle_r/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/hip_l/hip_adduction_l/value. bounds: [-0.872665, 0.523599]
+[2026-03-19 08:19:27.478] [info]   /jointset/hip_l/hip_adduction_l/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/hip_l/hip_rotation_l/value. bounds: [-0.698132, 0.698132]
+[2026-03-19 08:19:27.478] [info]   /jointset/hip_l/hip_rotation_l/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/walker_knee_l/knee_angle_l/value. bounds: [0, 2.0944]
+[2026-03-19 08:19:27.478] [info]   /jointset/walker_knee_l/knee_angle_l/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/patellofemoral_l/knee_angle_l_beta/value. bounds: [-99999.9, 99999.9]
+[2026-03-19 08:19:27.478] [info]   /jointset/patellofemoral_l/knee_angle_l_beta/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/ankle_l/ankle_angle_l/value. bounds: [-0.698132, 0.523599]
+[2026-03-19 08:19:27.478] [info]   /jointset/ankle_l/ankle_angle_l/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.478] [info]   /jointset/subtalar_l/subtalar_angle_l/value. bounds: [-0.349066, 0.349066]
+[2026-03-19 08:19:27.478] [info]   /jointset/subtalar_l/subtalar_angle_l/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.479] [info]   /jointset/mtp_l/mtp_angle_l/value. bounds: [-0.523599, 0.523599]
+[2026-03-19 08:19:27.479] [info]   /jointset/mtp_l/mtp_angle_l/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.479] [info]   /jointset/back/lumbar_extension/value. bounds: [-1.5708, 1.5708]
+[2026-03-19 08:19:27.479] [info]   /jointset/back/lumbar_extension/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.479] [info]   /jointset/back/lumbar_bending/value. bounds: [-1.5708, 1.5708]
+[2026-03-19 08:19:27.479] [info]   /jointset/back/lumbar_bending/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.479] [info]   /jointset/back/lumbar_rotation/value. bounds: [-1.5708, 1.5708]
+[2026-03-19 08:19:27.479] [info]   /jointset/acromial_r/arm_flex_r/value. bounds: [-1.5708, 1.5708]
+[2026-03-19 08:19:27.479] [info]   /jointset/acromial_r/arm_flex_r/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.479] [info]   /jointset/acromial_r/arm_add_r/value. bounds: [-2.0944, 1.5708]
+[2026-03-19 08:19:27.479] [info]   /jointset/acromial_r/arm_add_r/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.479] [info]   /jointset/acromial_r/arm_rot_r/value. bounds: [-1.5708, 1.5708]
+[2026-03-19 08:19:27.479] [info]   /jointset/acromial_r/arm_rot_r/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.479] [info]   /jointset/radius_hand_r/wrist_flex_r/value. bounds: [-1.22173, 1.22173]
+[2026-03-19 08:19:27.479] [info]   /jointset/radius_hand_r/wrist_flex_r/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.479] [info]   /jointset/radius_hand_r/wrist_dev_r/value. bounds: [-0.436332, 0.610865]
+[2026-03-19 08:19:27.479] [info]   /jointset/radius_hand_r/wrist_dev_r/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.479] [info]   /jointset/acromial_l/arm_flex_l/value. bounds: [-1.5708, 1.5708]
+[2026-03-19 08:19:27.479] [info]   /jointset/acromial_l/arm_flex_l/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.479] [info]   /jointset/acromial_l/arm_add_l/value. bounds: [-2.0944, 1.5708]
+[2026-03-19 08:19:27.479] [info]   /jointset/acromial_l/arm_add_l/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.479] [info]   /jointset/acromial_l/arm_rot_l/value. bounds: [-1.5708, 1.5708]
+[2026-03-19 08:19:27.479] [info]   /jointset/acromial_l/arm_rot_l/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.479] [info]   /jointset/elbow_l/elbow_flex_l/value. bounds: [0, 2.618]
+[2026-03-19 08:19:27.479] [info]   /jointset/elbow_l/elbow_flex_l/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.479] [info]   /jointset/radioulnar_l/pro_sup_l/value. bounds: [0, 1.5708]
+[2026-03-19 08:19:27.479] [info]   /jointset/radioulnar_l/pro_sup_l/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.479] [info]   /jointset/radius_hand_l/wrist_flex_l/value. bounds: [-1.22173, 1.22173]
+[2026-03-19 08:19:27.479] [info]   /jointset/radius_hand_l/wrist_dev_l/value. bounds: [-0.436332, 0.610865]
+[2026-03-19 08:19:27.479] [info]   /jointset/radius_hand_l/wrist_dev_l/speed. bounds: [-50, 50]
+[2026-03-19 08:19:27.479] [info] Controls: (total: 37)
+[2026-03-19 08:19:27.479] [info]   /forceset/lumbar_ext. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/lumbar_bend. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/lumbar_rot. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/shoulder_flex_r. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/shoulder_add_r. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/shoulder_rot_r. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/elbow_flex_r. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/reserve_jointset_hip_r_hip_flexion_r. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/reserve_jointset_ground_pelvis_pelvis_ty. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/pro_sup_r. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/wrist_flex_r. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/wrist_dev_r. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/shoulder_flex_l. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/shoulder_add_l. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/reserve_jointset_ankle_l_ankle_angle_l. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/reserve_jointset_mtp_r_mtp_angle_r. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/reserve_jointset_subtalar_r_subtalar_angle_r. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/shoulder_rot_l. bounds: [-inf, inf]
+[2026-03-19 08:19:27.479] [info]   /forceset/elbow_flex_l. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/pro_sup_l. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/wrist_flex_l. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/wrist_dev_l. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/reserve_jointset_ground_pelvis_pelvis_tilt. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/reserve_jointset_ground_pelvis_pelvis_list. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/reserve_jointset_ground_pelvis_pelvis_rotation. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/reserve_jointset_ground_pelvis_pelvis_tx. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/reserve_jointset_ground_pelvis_pelvis_tz. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/reserve_jointset_hip_r_hip_adduction_r. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/reserve_jointset_hip_r_hip_rotation_r. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/reserve_jointset_walker_knee_r_knee_angle_r. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/reserve_jointset_ankle_r_ankle_angle_r. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/reserve_jointset_subtalar_l_subtalar_angle_l. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/reserve_jointset_hip_l_hip_flexion_l. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/reserve_jointset_hip_l_hip_adduction_l. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/reserve_jointset_walker_knee_l_knee_angle_l. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/reserve_jointset_hip_l_hip_rotation_l. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info]   /forceset/reserve_jointset_mtp_l_mtp_angle_l. bounds: [-inf, inf]
+[2026-03-19 08:19:27.480] [info] Input controls: none
+[2026-03-19 08:19:27.480] [info] Parameters: none
+[2026-03-19 08:19:28.206] [info] Number of threads: 8
+[2026-03-19 08:22:13.830] [info] Set log level to Info.
+[2026-03-19 08:22:13.888] [info] ------------------------------------------------------------------------
+[2026-03-19 08:22:13.889] [info] Elapsed real time: 166 second(s) (2 minute(s), 46 second(s)).
+[2026-03-19 08:22:13.889] [info] Thu Mar 19 08:22:13 2026
+[2026-03-19 08:22:13.889] [warning] MocoCasADiSolver did NOT succeed:
+[2026-03-19 08:22:13.889] [warning]   User_Requested_Stop
+[2026-03-19 08:22:13.889] [info] ========================================================================
