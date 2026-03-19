@@ -1,3 +1,10 @@
 .vscode
+*.sto
+delete*
+.DS_Store
+temp_result.osim
+**/__pycache__/
+temp_result.osim
+
 .__pycache__
 opensim.log
