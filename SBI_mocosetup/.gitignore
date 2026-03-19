@@ -1,4 +1,9 @@
+subject02_torque_tracking_tracked_states.sto
 *.sto
 scaled_motion.mot
-temp_results.osim
+scaled_motion_*
 test_human
+test_human_*
+temp_results.osim
+temp_result.osim
+temp_result_*
