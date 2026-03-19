@@ -94,8 +94,9 @@ def run_moco_simulation():
     # 6) Study & Solver Initialisierung
     # --------------------------------------------------
     print("Initialisiere Study ...")
-    study = track.initialize()
-    solver = study.initCasADiSolver()
+    study :osm.MocoStudy= track.initialize()
+    solver :osm.MocoCasADiSolver= study.initCasADiSolver()
+    solver.set_parallel(1) # 0 for no parallel, 1 for all cores,
     solver.set_optim_solver("ipopt")
     solver.set_verbosity(2)
     solver.set_optim_convergence_tolerance(1e-3)
