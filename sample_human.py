@@ -2,7 +2,7 @@ import opensim as osm
 import numpy as np
 #takes as parameters the name of the output file, prints the scaled model as a osim file into the folder and returns the model internally
 def sample_human(name_of_return_file: str):
-    model_in = "Rajagopal2016.osim" #standard model
+    model_in = "gait2392_simbody.osim" #standard model
 
     # parameters of the bivariat lognormal distributed properties height and mass
     mu_h, sigma_h = 0.562, 0.039    

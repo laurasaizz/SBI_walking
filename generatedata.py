@@ -5,7 +5,7 @@ import tqdm
 
 def leg_length(model, state):
     hip_r = model.getJointSet().get("hip_r")
-    knee_r = model.getJointSet().get("walker_knee_r")
+    knee_r = model.getJointSet().get("knee_r")
     ankle_r = model.getJointSet().get("ankle_r")
 
     hip_pos = hip_r.getChildFrame().getPositionInGround(state)
