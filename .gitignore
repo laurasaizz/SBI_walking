@@ -5,10 +5,12 @@ delete*
 temp_result.osim
 **/__pycache__/
 temp_result.osim
-
+model_*.osim
+model*osim
 .__pycache__
 opensim.log
 scaled_motion.mot
 subject02_torque_tracking_tracked_states.sto
 temp_result.osim
 test_human
+dataset.npz

@@ -91,7 +91,8 @@ def generate_dataset(
     all_foot = []
     all_leg = []
 
-    for i in range(num_samples):
+    import tqdm
+    for i in tqdm.tqdm(range(num_samples)):
 
         print(f"Generating sample {i+1}/{num_samples}")
 
@@ -115,3 +116,8 @@ def generate_dataset(
              leg=all_leg)
 
     print(f"Dataset saved to {output_file}")
+
+if __name__ == "__main__":
+    n = 2000
+    osim.Logger.setLevelString('error')
+    generate_dataset(100,"normal.mot")
