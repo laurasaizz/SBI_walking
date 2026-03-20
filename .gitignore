@@ -12,3 +12,4 @@ scaled_motion.mot
 subject02_torque_tracking_tracked_states.sto
 temp_result.osim
 test_human
+model.osim
