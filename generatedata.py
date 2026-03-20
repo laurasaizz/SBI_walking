@@ -1,6 +1,7 @@
 import opensim as osim
 import numpy as np
 from sample_human import sample_human
+import tqdm
 
 def leg_length(model, state):
     hip_r = model.getJointSet().get("hip_r")
@@ -98,7 +99,7 @@ def generate_dataset(
     all_height = []
     all_com = []
 
-    for i in range(num_samples):
+    for i in tqdm.tqdm(range(num_samples)):
 
         print(f"Generating sample {i+1}/{num_samples}")
 
@@ -114,7 +115,6 @@ def generate_dataset(
         all_height.append(height)
         all_com.append(com_data)
 
-    # stack dataset
     all_foot = np.array(all_foot)   # (num_samples, N, 6)
     all_height = np.array(all_height)     # (num_samples, 1)
     all_com = np.array(all_com)     # (num_samples, N, 3)
@@ -125,3 +125,8 @@ def generate_dataset(
              height=all_height)
 
     print(f"Dataset saved to {output_file}")
+
+if __name__ == "__main__":
+    n = 2000
+    osim.Logger.setLevelString('error')
+    generate_dataset(100,"normal.mot")
