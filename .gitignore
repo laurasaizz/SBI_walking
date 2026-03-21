@@ -15,3 +15,5 @@ temp_result.osim
 test_human
 dataset.npz
 big_dataset.npz
+
+model.osim

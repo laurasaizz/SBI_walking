@@ -2,9 +2,7 @@ import opensim as osm
 import numpy as np
 #takes as parameters the name of the output file, prints the scaled model as a osim file into the folder and returns the model internally
 def sample_human(name_of_return_file: str):
-    model_in = "Rajagopal2016.osim" #standard model
-    xml_setup = "scaling.xml" #scaling default settings
-    model_out = name_of_return_file
+    model_in = "gait2392_simbody.osim" #standard model
 
     # parameters of the bivariat lognormal distributed properties height and mass
     mu_h, sigma_h = 0.562, 0.039    
@@ -20,7 +18,6 @@ def sample_human(name_of_return_file: str):
     new_mass = np.exp(ln_w)
     force_factor = (new_mass/75.337)**(2/3) #explaination: muscle force = constant1 * area of muscle, area of muscle = constant2 * r^2, r = density factor * mass^{1/3}
     height_factor = new_height/1.7
-    print("height_factor:", height_factor)
     
     #loading tool
     scale_tool = osm.ScaleTool()

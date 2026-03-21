@@ -1,10 +1,11 @@
 import opensim as osim
 import numpy as np
 from sample_human import sample_human
+import tqdm
 
 def leg_length(model, state):
     hip_r = model.getJointSet().get("hip_r")
-    knee_r = model.getJointSet().get("walker_knee_r")
+    knee_r = model.getJointSet().get("knee_r")
     ankle_r = model.getJointSet().get("ankle_r")
 
     hip_pos = hip_r.getChildFrame().getPositionInGround(state)
@@ -26,7 +27,7 @@ def leg_length(model, state):
 def generate_single_sample(model_path, mot_path):
 
     model = osim.Model(model_path)
-    state:osim.State = model.initSystem()
+    state: osim.State = model.initSystem()
 
     table = osim.TimeSeriesTable(mot_path)
 
@@ -52,9 +53,9 @@ def generate_single_sample(model_path, mot_path):
     N = table.getNumRows()
 
     foot_data = np.zeros((N, 6))
-    times = table.getIndependentColumn()
+    com_data = np.zeros((N, 3))
 
-    leglength = None
+    times = table.getIndependentColumn()
 
     for i in range(N):
 
@@ -66,9 +67,6 @@ def generate_single_sample(model_path, mot_path):
 
         model.realizePosition(state)
 
-        if i == 0:
-            leglength = leg_length(model, state)
-
         pos_r = foot_r.getPositionInGround(state)
         pos_l = foot_l.getPositionInGround(state)
 
@@ -77,10 +75,19 @@ def generate_single_sample(model_path, mot_path):
             pos_l.get(0), pos_l.get(1), pos_l.get(2)
         ]
 
-    # remove drift
-    foot_data -= foot_data[0]
+        com = model.calcMassCenterPosition(state)
 
-    return foot_data, np.array([leglength])
+        com_data[i, :] = [
+            com.get(0),
+            com.get(1),
+            com.get(2)
+        ]
+
+    # remove drift (same reference frame)
+    foot_data -= foot_data[0]
+    com_data -= com_data[0]
+
+    return foot_data, com_data
 
 def generate_dataset(
     num_samples,
@@ -89,31 +96,33 @@ def generate_dataset(
 ):
 
     all_foot = []
-    all_leg = []
+    all_height = []
+    all_com = []
 
-    import tqdm
     for i in tqdm.tqdm(range(num_samples)):
 
         print(f"Generating sample {i+1}/{num_samples}")
 
-        model_file = f"model_{i}.osim"
+        model_file = f"model.osim"
 
-        sample_human(model_file)
+        model, height = sample_human(model_file)
 
-        foot_data, leg_length = generate_single_sample(
+        foot_data, com_data = generate_single_sample(
             model_file, mot_path
         )
 
         all_foot.append(foot_data)
-        all_leg.append(leg_length)
+        all_height.append(height)
+        all_com.append(com_data)
 
-    # stack dataset
     all_foot = np.array(all_foot)   # (num_samples, N, 6)
-    all_leg = np.array(all_leg)     # (num_samples, 1)
+    all_height = np.array(all_height)     # (num_samples, 1)
+    all_com = np.array(all_com)     # (num_samples, N, 3)
 
     np.savez(output_file,
              foot=all_foot,
-             leg=all_leg)
+             com=all_com,
+             height=all_height)
 
     print(f"Dataset saved to {output_file}")
 
