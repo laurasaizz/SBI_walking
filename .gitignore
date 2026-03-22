@@ -17,3 +17,4 @@ dataset.npz
 big_dataset.npz
 
 model.osim
+saved_model_*

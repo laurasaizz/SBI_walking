@@ -105,7 +105,7 @@ class RealNVP(nn.Module):
 
     def reverse(self, z: torch.Tensor, y: torch.Tensor = torch.ones((0,))):
         #!TODO: readd
-        # x = z
+        x = z
         # x = self.blocks[-1].reverse(z, y)
         for block, R in zip(
             reversed(self.blocks), reversed(self.rotation_matrices) # self.blocks[:-1]
@@ -131,6 +131,70 @@ class RealNVP(nn.Module):
                 )
         return self.reverse(gaussians, conditions)
 
+class RealNVPSummary(nn.Module):
+    def __init__(self,input_size = 200, condition_size = 100 , reduced_condition_size = 8,s_hidden = 1000,s_layers=6, r_hidden = 500,r_blocks=6, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.summary = RegressionNetwork(condition_size,hidden_size= s_hidden, layers=s_layers, output_size=reduced_condition_size)
+        self.realNVP = RealNVP(input_size=input_size,hidden_size=r_hidden,blocks=r_blocks,condition_size=reduced_condition_size)
+
+    def forward(self,x,y = None):
+        """
+        x is observation, y is [lam,mu,i0]
+        """
+        hy = self.summary(y)
+        codes = self.realNVP(x,hy)
+        return codes
+    def reverse(self,z,y):
+        hy = self.summary(y)
+        x = self.realNVP.reverse(z,hy)
+        return x
+    
+    def sample(self,x,n):
+        """
+        samples n per condition
+        """
+        hx = self.summary(x)
+        return self.realNVP.sample(n,hx)
+
+
+class CouplingBlockSingle(nn.Module):
+    def __init__(self, input_size: int, hidden_size: int, condition_size: int = 0):
+        super(CouplingBlockSingle, self).__init__()
+        self.scale_net = nn.Sequential(
+            nn.Linear(condition_size, hidden_size),
+            nn.ReLU(),
+            nn.Linear(hidden_size, hidden_size),
+            nn.ReLU(),
+            nn.Linear(hidden_size, input_size),
+            nn.Tanh(),
+            # remember to exp this
+        )
+        self.cond_drop = nn.Dropout(0.1)
+        self.t_net = nn.Sequential(
+            nn.Linear(condition_size, hidden_size),
+            nn.ReLU(),
+            nn.Linear(hidden_size, hidden_size),
+            nn.ReLU(),
+            nn.Linear(hidden_size, input_size),
+        )
+        self.block_det = 0
+
+    def forward(
+        self, x: torch.Tensor, y: torch.Tensor = torch.ones((0,), device=device)
+    ):
+        # assume x is of shape (batch_size, input_size)
+    
+        y_drop = self.cond_drop(y)
+
+        
+        scaled_x1 = self.scale_net(y_drop)
+        x2 = x * torch.exp(scaled_x1) + self.t_net(y_drop)
+        self.block_det = torch.sum(scaled_x1)
+        return x2
+
+    def reverse(self, z, y):
+        x = (z - self.t_net(y)) / torch.exp(self.scale_net(y))
+        return x
 
 class RealNVPsingle(nn.Module):
     condition_size: int
@@ -138,47 +202,26 @@ class RealNVPsingle(nn.Module):
     def __init__(
         self, input_size: int = 1, hidden_size: int = 32, blocks: int = 8, condition_size: int = 0
     ):
-        super(RealNVP, self).__init__()
+        super(RealNVPsingle, self).__init__()
         self.input_size = input_size
         self.condition_size = condition_size
-        self.blocks: nn.ModuleList["CouplingBlockSingle"] = nn.ModuleList() #TODO:
-        self.rotation_matrices = []
-        for i in range(blocks - 1):
-            self.blocks.append(CouplingBlock(input_size, hidden_size, condition_size))
-            R = get_orthonormal_matrix(input_size)  # R means Rotational matrix,
-            # could also be named Q.
-            R.requires_grad = False  # prof said its not worth to learn (probably)
-            # but it seams to decrease train loss. # but reconstruction is not possible if R becomes not Orthonormal
-            self.rotation_matrices.append(R)
+        self.blocks: nn.ModuleList[CouplingBlockSingle] = nn.ModuleList() #TODO:
+        for i in range(blocks):
+            self.blocks.append(CouplingBlockSingle(input_size, hidden_size, condition_size))
 
-        #!TODO: readd
-        self.blocks.append(CouplingBlock(input_size, hidden_size, condition_size))
 
     def forward(self, x, y=torch.ones((0,), device=device)):
-        """
-        y should be a onehot
-        """
-        for block, R in zip(
-            self.blocks, self.rotation_matrices
-        ):  # pyright: ignore[reportAssignmentType]
-            block: CouplingBlock
-            # last from blocks will not be used in this loop
-            x = block.forward(x, y)
-            x = x @ R  # rotation
-        #!TODO: readd
-        x = self.blocks[-1].forward(x, y)
-        return x
+        z = x 
+        for block in self.blocks: 
+            block: CouplingBlockSingle
+            z = block.forward(z, y)
+        return z
 
     def reverse(self, z: torch.Tensor, y: torch.Tensor = torch.ones((0,))):
-        #!TODO: readd
-        # x = z
-        x = self.blocks[-1].reverse(z, y)
-        for block, R in zip(
-            reversed(self.blocks[:-1]), reversed(self.rotation_matrices)
-        ):
-            block: CouplingBlock
-            x = x @ R.T
-            x = block.reverse(x, y)
+        x = z
+        for block in reversed(self.blocks):
+            block: CouplingBlockSingle
+            x = block.reverse(z = x, y = y)
         return x
 
     def sample(self, num_samples: int, conditions: Optional[torch.Tensor] = None):
@@ -198,27 +241,11 @@ class RealNVPsingle(nn.Module):
         return self.reverse(gaussians, conditions)
 
 
-
-
-
-# std_tensor = torch.tensor([...], device=device).reshape((1, 3))
-# mean_tensor = torch.tensor([...], device=device).reshape((1, 3))
-
-
-# def y_scaling(y: torch.Tensor):
-#     # y shape: bs x 3
-#     return (y - mean_tensor) / std_tensor
-
-
-# def y_unscale(y_scaled: torch.Tensor):
-#     return y_scaled * std_tensor + mean_tensor
-
-
-class RealNVPSummary(nn.Module):
-    def __init__(self,input_size = 200, condition_size = 100 , reduced_condition_size = 8,s_hidden = 1000,s_layers=6, r_hidden = 500,r_blocks=6, *args, **kwargs):
+class RealNVPSummarySingle(nn.Module):
+    def __init__(self,input_size = 1, condition_size = 100 , reduced_condition_size = 8,s_hidden = 1000,s_layers=6, r_hidden = 500,r_blocks=6, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.summary = RegressionNetwork(condition_size,hidden_size= s_hidden, layers=s_layers, output_size=reduced_condition_size)
-        self.realNVP = RealNVP(input_size=input_size,hidden_size=r_hidden,blocks=r_blocks,condition_size=reduced_condition_size)
+        self.realNVP = RealNVPsingle(input_size=input_size,hidden_size=r_hidden,blocks=r_blocks,condition_size=reduced_condition_size)
 
     def forward(self,x,y = None):
         """
@@ -229,8 +256,8 @@ class RealNVPSummary(nn.Module):
         return codes
     def reverse(self,z,y):
         hy = self.summary(y)
-        y = self.realNVP.reverse(z,hy)
-        return y
+        x = self.realNVP.reverse(z,hy)
+        return x
     
     def sample(self,x,n):
         """
