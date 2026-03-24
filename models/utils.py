@@ -33,3 +33,40 @@ if __name__ == "__main__":
     plt.legend()
     plt.grid()
     plt.show()
+
+def make_gif(frame_list:list,filename,title=""):
+    num_frames = len(frame_list)
+
+
+    frames = []
+
+    lambda_list = np.linspace(0,1.2,num_frames)
+
+
+    # 2. Loop to generate each Matplotlib figure (frame)
+    for i in enumerate(frame_list):
+        # Create a figure and axis for the plot
+        fig, ax = plt.subplots()
+        
+        # --- Capture the plot as a numpy array (image data) ---
+        # The figure is rendered, and the data is captured directly into a numpy array.
+        # This avoids saving a file for every frame.
+        fig.canvas.draw()
+        image = np.array(fig.canvas.renderer.buffer_rgba())
+
+        # Close the figure to free up memory
+        plt.close(fig)
+
+        # Add the captured image to the frames list
+        frames.append(image)
+    # 3. Save the list of frames as a GIF
+    # 'duration' is in milliseconds for imageio.v3
+    DURATION_MS = 100
+
+    import imageio.v2 as iio2
+    iio2.mimsave(
+        filename,          # Output file name
+        frames,            # List of frames (NumPy arrays)
+        duration=DURATION_MS,
+        loop=0             # 0 means loop forever
+    )

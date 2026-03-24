@@ -17,7 +17,7 @@ def get_orthonormal_matrix(d: int) -> torch.Tensor:
 
 
 class CouplingBlock(nn.Module):
-    def __init__(self, input_size: int, hidden_size: int, condition_size: int = 0):
+    def __init__(self, input_size: int, hidden_size: int, condition_size: int = 0,drop = 0.1):
         super(CouplingBlock, self).__init__()
         self.scale_net = nn.Sequential(
             nn.Linear(input_size - input_size // 2 + condition_size, hidden_size),
@@ -28,7 +28,7 @@ class CouplingBlock(nn.Module):
             nn.Tanh(),
             # remember to exp this
         )
-        self.cond_drop = nn.Dropout(0.1)
+        self.cond_drop = nn.Dropout(drop)
         self.t_net = nn.Sequential(
             nn.Linear(input_size - input_size // 2 + condition_size, hidden_size),
             nn.ReLU(),
