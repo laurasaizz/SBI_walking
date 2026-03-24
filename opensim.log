@@ -48312,3 +48312,543 @@
 [2026-03-20 12:16:07.590] [info] Wrote model file 'temp_result.osim' from model.
 [2026-03-20 12:16:07.661] [info] Loaded model model from file temp_result.osim
 [2026-03-20 12:16:08.160] [info] Loaded model model from file model.osim
+[2026-03-20 12:26:55.728] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:26:55.759] [info] Loaded model 3DGaitModel2392 from file gait2392_simbody.osim
+[2026-03-20 12:26:55.760] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:55.762] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:55.763] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:55.763] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:55.763] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:55.763] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:55.763] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:55.763] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:55.763] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:55.764] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:55.925] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:55.933] [info] Processing subject ...
+[2026-03-20 12:26:55.934] [info] Step 1: Loading generic model
+[2026-03-20 12:26:55.944] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:26:55.969] [info] Loaded model 3DGaitModel2392 from file c:\MLprojects\sbi for walking\gait2392_simbody.osim
+[2026-03-20 12:26:55.970] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:55.973] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:55.975] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:55.975] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:55.975] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:55.975] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:55.975] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:55.975] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:55.975] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:55.976] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:56.126] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:56.151] [info] Step 2: Scaling generic model
+[2026-03-20 12:26:56.251] [info] Wrote model file 'temp_result.osim' from model.
+[2026-03-20 12:26:56.305] [info] Loaded model model from file temp_result.osim
+[2026-03-20 12:26:56.306] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:56.309] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:56.312] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:56.312] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:56.312] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:56.313] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:56.313] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:56.313] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:56.313] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:56.313] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:56.457] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:56.554] [info] Loaded model model from file model.osim
+[2026-03-20 12:26:56.554] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:56.557] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:56.559] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:56.559] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:56.559] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:56.559] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:56.559] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:56.559] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:56.559] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:56.559] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:56.677] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:56.727] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:26:56.757] [info] Loaded model 3DGaitModel2392 from file gait2392_simbody.osim
+[2026-03-20 12:26:56.757] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:56.759] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:56.761] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:56.761] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:56.761] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:56.761] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:56.761] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:56.761] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:56.761] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:56.761] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:56.888] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:56.891] [info] Processing subject ...
+[2026-03-20 12:26:56.891] [info] Step 1: Loading generic model
+[2026-03-20 12:26:56.902] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:26:56.925] [info] Loaded model 3DGaitModel2392 from file c:\MLprojects\sbi for walking\gait2392_simbody.osim
+[2026-03-20 12:26:56.925] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:56.927] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:56.929] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:56.929] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:56.929] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:56.929] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:56.929] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:56.929] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:56.929] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:56.929] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:57.040] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:57.057] [info] Step 2: Scaling generic model
+[2026-03-20 12:26:57.139] [info] Wrote model file 'temp_result.osim' from model.
+[2026-03-20 12:26:57.206] [info] Loaded model model from file temp_result.osim
+[2026-03-20 12:26:57.206] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:57.209] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:57.210] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:57.210] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:57.211] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:57.211] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:57.211] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:57.211] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:57.211] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:57.211] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:57.346] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:57.443] [info] Loaded model model from file model.osim
+[2026-03-20 12:26:57.444] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:57.447] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:57.448] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:57.448] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:57.448] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:57.449] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:57.449] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:57.449] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:57.449] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:57.449] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:57.618] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:57.659] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:26:57.691] [info] Loaded model 3DGaitModel2392 from file gait2392_simbody.osim
+[2026-03-20 12:26:57.691] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:57.693] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:57.695] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:57.695] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:57.695] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:57.695] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:57.695] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:57.695] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:57.695] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:57.695] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:57.859] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:57.863] [info] Processing subject ...
+[2026-03-20 12:26:57.863] [info] Step 1: Loading generic model
+[2026-03-20 12:26:57.874] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:26:57.897] [info] Loaded model 3DGaitModel2392 from file c:\MLprojects\sbi for walking\gait2392_simbody.osim
+[2026-03-20 12:26:57.898] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:57.901] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:57.905] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:57.905] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:57.905] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:57.905] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:57.905] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:57.905] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:57.905] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:57.905] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:58.053] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:58.075] [info] Step 2: Scaling generic model
+[2026-03-20 12:26:58.205] [info] Wrote model file 'temp_result.osim' from model.
+[2026-03-20 12:26:58.257] [info] Loaded model model from file temp_result.osim
+[2026-03-20 12:26:58.258] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:58.260] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:58.263] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:58.263] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:58.263] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:58.263] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:58.263] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:58.263] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:58.263] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:58.264] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:58.426] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:58.587] [info] Loaded model model from file model.osim
+[2026-03-20 12:26:58.588] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:58.591] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:58.594] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:58.594] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:58.594] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:58.595] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:58.595] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:58.595] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:58.595] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:58.595] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:58.821] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:58.875] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:26:58.907] [info] Loaded model 3DGaitModel2392 from file gait2392_simbody.osim
+[2026-03-20 12:26:58.907] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:58.909] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:58.911] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:58.911] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:58.911] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:58.911] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:58.911] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:58.911] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:58.911] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:58.911] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:59.025] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:59.028] [info] Processing subject ...
+[2026-03-20 12:26:59.028] [info] Step 1: Loading generic model
+[2026-03-20 12:26:59.040] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:26:59.076] [info] Loaded model 3DGaitModel2392 from file c:\MLprojects\sbi for walking\gait2392_simbody.osim
+[2026-03-20 12:26:59.076] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:59.080] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:59.083] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:59.083] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:59.083] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:59.083] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:59.083] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:59.083] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:59.083] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:59.083] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:59.262] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:59.284] [info] Step 2: Scaling generic model
+[2026-03-20 12:26:59.374] [info] Wrote model file 'temp_result.osim' from model.
+[2026-03-20 12:26:59.425] [info] Loaded model model from file temp_result.osim
+[2026-03-20 12:26:59.425] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:59.427] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:59.429] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:59.429] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:59.429] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:59.429] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:59.429] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:59.430] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:59.430] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:59.430] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:59.588] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:59.687] [info] Loaded model model from file model.osim
+[2026-03-20 12:26:59.688] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:59.690] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:59.692] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:59.692] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:59.692] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:59.692] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:59.692] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:59.692] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:59.693] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:59.693] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:26:59.842] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:26:59.880] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:26:59.914] [info] Loaded model 3DGaitModel2392 from file gait2392_simbody.osim
+[2026-03-20 12:26:59.915] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:26:59.920] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:26:59.923] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:26:59.923] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:26:59.923] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:26:59.923] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:26:59.923] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:26:59.924] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:26:59.924] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:26:59.924] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:00.096] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:00.104] [info] Processing subject ...
+[2026-03-20 12:27:00.104] [info] Step 1: Loading generic model
+[2026-03-20 12:27:00.118] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:27:00.146] [info] Loaded model 3DGaitModel2392 from file c:\MLprojects\sbi for walking\gait2392_simbody.osim
+[2026-03-20 12:27:00.147] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:00.150] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:00.152] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:00.152] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:00.152] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:00.152] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:00.152] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:00.152] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:00.152] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:00.152] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:00.354] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:00.373] [info] Step 2: Scaling generic model
+[2026-03-20 12:27:00.463] [info] Wrote model file 'temp_result.osim' from model.
+[2026-03-20 12:27:00.528] [info] Loaded model model from file temp_result.osim
+[2026-03-20 12:27:00.529] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:00.533] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:00.537] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:00.537] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:00.538] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:00.538] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:00.538] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:00.538] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:00.539] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:00.539] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:00.703] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:00.788] [info] Loaded model model from file model.osim
+[2026-03-20 12:27:00.789] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:00.791] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:00.792] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:00.792] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:00.792] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:00.792] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:00.792] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:00.792] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:00.792] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:00.793] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:00.938] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:00.981] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:27:01.012] [info] Loaded model 3DGaitModel2392 from file gait2392_simbody.osim
+[2026-03-20 12:27:01.012] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:01.015] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:01.019] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:01.019] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:01.019] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:01.019] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:01.019] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:01.020] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:01.020] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:01.020] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:01.188] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:01.191] [info] Processing subject ...
+[2026-03-20 12:27:01.191] [info] Step 1: Loading generic model
+[2026-03-20 12:27:01.203] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:27:01.228] [info] Loaded model 3DGaitModel2392 from file c:\MLprojects\sbi for walking\gait2392_simbody.osim
+[2026-03-20 12:27:01.229] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:01.231] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:01.235] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:01.235] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:01.235] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:01.235] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:01.235] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:01.235] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:01.235] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:01.235] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:01.453] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:01.464] [info] Step 2: Scaling generic model
+[2026-03-20 12:27:01.557] [info] Wrote model file 'temp_result.osim' from model.
+[2026-03-20 12:27:01.619] [info] Loaded model model from file temp_result.osim
+[2026-03-20 12:27:01.620] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:01.624] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:01.629] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:01.629] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:01.629] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:01.629] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:01.630] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:01.630] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:01.630] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:01.630] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:01.822] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:01.943] [info] Loaded model model from file model.osim
+[2026-03-20 12:27:01.943] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:01.945] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:01.947] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:01.947] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:01.947] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:01.947] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:01.947] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:01.947] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:01.947] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:01.948] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:02.080] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:02.144] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:27:02.198] [info] Loaded model 3DGaitModel2392 from file gait2392_simbody.osim
+[2026-03-20 12:27:02.198] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:02.202] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:02.205] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:02.206] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:02.206] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:02.206] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:02.206] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:02.206] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:02.206] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:02.206] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:02.451] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:02.455] [info] Processing subject ...
+[2026-03-20 12:27:02.455] [info] Step 1: Loading generic model
+[2026-03-20 12:27:02.470] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:27:02.497] [info] Loaded model 3DGaitModel2392 from file c:\MLprojects\sbi for walking\gait2392_simbody.osim
+[2026-03-20 12:27:02.498] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:02.501] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:02.503] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:02.503] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:02.503] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:02.503] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:02.503] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:02.503] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:02.504] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:02.504] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:02.660] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:02.677] [info] Step 2: Scaling generic model
+[2026-03-20 12:27:02.796] [info] Wrote model file 'temp_result.osim' from model.
+[2026-03-20 12:27:02.882] [info] Loaded model model from file temp_result.osim
+[2026-03-20 12:27:02.883] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:02.887] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:02.890] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:02.890] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:02.890] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:02.891] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:02.891] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:02.891] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:02.891] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:02.891] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:03.116] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:03.279] [info] Loaded model model from file model.osim
+[2026-03-20 12:27:03.281] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:03.286] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:03.289] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:03.289] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:03.289] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:03.289] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:03.289] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:03.289] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:03.290] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:03.290] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:03.486] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:03.544] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:27:03.571] [info] Loaded model 3DGaitModel2392 from file gait2392_simbody.osim
+[2026-03-20 12:27:03.572] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:03.574] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:03.576] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:03.576] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:03.576] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:03.576] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:03.576] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:03.576] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:03.576] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:03.576] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:03.739] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:03.743] [info] Processing subject ...
+[2026-03-20 12:27:03.743] [info] Step 1: Loading generic model
+[2026-03-20 12:27:03.762] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:27:03.792] [info] Loaded model 3DGaitModel2392 from file c:\MLprojects\sbi for walking\gait2392_simbody.osim
+[2026-03-20 12:27:03.792] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:03.794] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:03.796] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:03.796] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:03.796] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:03.796] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:03.796] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:03.796] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:03.796] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:03.796] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:03.944] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:03.963] [info] Step 2: Scaling generic model
+[2026-03-20 12:27:04.049] [info] Wrote model file 'temp_result.osim' from model.
+[2026-03-20 12:27:04.090] [info] Loaded model model from file temp_result.osim
+[2026-03-20 12:27:04.091] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:04.094] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:04.096] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:04.096] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:04.096] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:04.096] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:04.096] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:04.096] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:04.096] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:04.096] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:04.280] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:04.394] [info] Loaded model model from file model.osim
+[2026-03-20 12:27:04.395] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:04.400] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:04.402] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:04.402] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:04.403] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:04.403] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:04.403] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:04.403] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:04.403] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:04.403] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:04.564] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:04.609] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:27:04.643] [info] Loaded model 3DGaitModel2392 from file gait2392_simbody.osim
+[2026-03-20 12:27:04.644] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:04.647] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:04.650] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:04.650] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:04.650] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:04.650] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:04.650] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:04.650] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:04.650] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:04.650] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:04.865] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:04.870] [info] Processing subject ...
+[2026-03-20 12:27:04.870] [info] Step 1: Loading generic model
+[2026-03-20 12:27:04.887] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:27:04.908] [info] Loaded model 3DGaitModel2392 from file c:\MLprojects\sbi for walking\gait2392_simbody.osim
+[2026-03-20 12:27:04.909] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:04.912] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:04.915] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:04.915] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:04.915] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:04.915] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:04.915] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:04.915] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:04.915] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:04.915] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:05.084] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:05.105] [info] Step 2: Scaling generic model
+[2026-03-20 12:27:05.234] [info] Wrote model file 'temp_result.osim' from model.
+[2026-03-20 12:27:05.321] [info] Loaded model model from file temp_result.osim
+[2026-03-20 12:27:05.322] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:05.324] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:05.325] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:05.325] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:05.326] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:05.326] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:05.326] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:05.326] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:05.326] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:05.326] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:05.475] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:05.641] [info] Loaded model model from file model.osim
+[2026-03-20 12:27:05.643] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:05.649] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:05.652] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:05.653] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:05.653] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:05.653] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:05.653] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:05.653] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:05.653] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:05.653] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:05.879] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:05.925] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:27:05.958] [info] Loaded model 3DGaitModel2392 from file gait2392_simbody.osim
+[2026-03-20 12:27:05.959] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:05.962] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:05.964] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:05.964] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:05.964] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:05.965] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:05.965] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:05.965] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:05.965] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:05.965] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:06.206] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:06.210] [info] Processing subject ...
+[2026-03-20 12:27:06.210] [info] Step 1: Loading generic model
+[2026-03-20 12:27:06.226] [info] Updating Model file from 40000 to latest format...
+[2026-03-20 12:27:06.261] [info] Loaded model 3DGaitModel2392 from file c:\MLprojects\sbi for walking\gait2392_simbody.osim
+[2026-03-20 12:27:06.262] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:06.267] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:06.270] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:06.270] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:06.271] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:06.271] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:06.271] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:06.271] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:06.271] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:06.271] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:06.457] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:06.476] [info] Step 2: Scaling generic model
+[2026-03-20 12:27:06.594] [info] Wrote model file 'temp_result.osim' from model.
+[2026-03-20 12:27:06.638] [info] Loaded model model from file temp_result.osim
+[2026-03-20 12:27:06.639] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:06.641] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:06.642] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:06.642] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:06.642] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:06.642] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:06.642] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:06.642] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:06.642] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:06.642] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:06.798] [warning] Couldn't find file 'hat_ribs.vtp'.
+[2026-03-20 12:27:06.904] [info] Loaded model model from file model.osim
+[2026-03-20 12:27:06.905] [warning] Couldn't find file 'treadmill.vtp'.
+[2026-03-20 12:27:06.908] [warning] Couldn't find file 'pelvis.vtp'.
+[2026-03-20 12:27:06.910] [warning] Couldn't find file 'femur_r.vtp'.
+[2026-03-20 12:27:06.910] [warning] Couldn't find file 'tibia_r.vtp'.
+[2026-03-20 12:27:06.910] [warning] Couldn't find file 'fibula.vtp'.
+[2026-03-20 12:27:06.910] [warning] Couldn't find file 'talus.vtp'.
+[2026-03-20 12:27:06.910] [warning] Couldn't find file 'foot.vtp'.
+[2026-03-20 12:27:06.910] [warning] Couldn't find file 'bofoot.vtp'.
+[2026-03-20 12:27:06.910] [warning] Couldn't find file 'femur_l.vtp'.
+[2026-03-20 12:27:06.910] [warning] Couldn't find file 'tibia_l.vtp'.
+[2026-03-20 12:27:07.051] [warning] Couldn't find file 'hat_ribs.vtp'.
