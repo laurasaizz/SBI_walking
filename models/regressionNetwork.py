@@ -4,12 +4,13 @@ import torch.nn.utils as utils
 from torch.amp.grad_scaler import GradScaler
 
 class RegressionNetwork(nn.Module):
-    def __init__(self, input_size=200, hidden_size=400, layers=6, output_size=3):
+    def __init__(self, input_size=200, hidden_size=400, layers=6, output_size=3,p_drop = 0.0):
         """ """
         super().__init__()
         self.input_size = input_size
         self.layers = layers
         self.encoder_layers = []
+        self.encoder_layers.append(nn.Dropout(p_drop))
         self.encoder_layers.append((nn.Linear(input_size, hidden_size)))
         self.encoder_layers.append(nn.ReLU())
         for i in range(layers):
