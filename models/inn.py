@@ -17,50 +17,51 @@ def get_orthonormal_matrix(d: int) -> torch.Tensor:
 
 
 class CouplingBlock(nn.Module):
-    def __init__(self, input_size: int, hidden_size: int, condition_size: int = 0,drop = 0.1):
+    def __init__(self, input_size: int, hidden_size: int, condition_size: int = 0,drop = 0.1, invert_rounding = True):
         super(CouplingBlock, self).__init__()
+        self.a = nn.Parameter(torch.tensor([0.1],device=device))
+        self.a.requires_grad=False  # a is hyperparam
+        
+        self.unchanged_size = input_size // 2 if invert_rounding else (input_size - input_size // 2)  # x1 size   # is half input_size, rounded down
+        self.changed_size = input_size - self.unchanged_size # x2 size  # half, rounded up
+
         self.scale_net = nn.Sequential(
-            nn.Linear(input_size - input_size // 2 + condition_size, hidden_size),
+            nn.Linear(self.unchanged_size + condition_size, hidden_size),
             nn.ReLU(),
             nn.Linear(hidden_size, hidden_size),
             nn.ReLU(),
-            nn.Linear(hidden_size, input_size // 2),
+            nn.Linear(hidden_size, self.changed_size),
             nn.Tanh(),
             # remember to exp this
         )
         self.cond_drop = nn.Dropout(drop)
         self.t_net = nn.Sequential(
-            nn.Linear(input_size - input_size // 2 + condition_size, hidden_size),
+            nn.Linear(self.unchanged_size + condition_size, hidden_size),
             nn.ReLU(),
             nn.Linear(hidden_size, hidden_size),
             nn.ReLU(),
-            nn.Linear(hidden_size, input_size // 2),
+            nn.Linear(hidden_size, self.changed_size),
         )
-        self.block_det = 0
+        # self.block_det = 0
 
     def forward(
         self, x: torch.Tensor, y: torch.Tensor = torch.ones((0,), device=device)
     ):
         # assume x is of shape (batch_size, input_size)
-        x1, x2 = torch.split(x, [x.size(1) - x.size(1) // 2, x.size(1) // 2], dim=1)
+        x1, x2 = torch.split(x, [self.unchanged_size, self.changed_size], dim=1)
         # creates views!
-        y_drop = self.cond_drop(y)
+        y_drop = y #self.cond_drop(y)
         x1_cond = torch.cat([x1, y_drop], dim=1)
-        scaled_x1 = self.scale_net(x1_cond)
+        scaled_x1 = self.scale_net(x1_cond) * self.a
         z2 = x2 * torch.exp(scaled_x1) + self.t_net(x1_cond)
-        # could be exp(a * ...), but also for backwards.
-        # where a is hyperparam
         z = torch.cat([x1, z2], dim=1)
-        # if self.training:
-        # # just always compute, because we need it for loss calculation
-        # its not necesarry for inference, but we only do training and testing
-        self.block_det = torch.sum(scaled_x1)
-        return z
+        block_det = torch.sum(scaled_x1,dim=1)
+        return z, block_det
 
     def reverse(self, z, y):
-        z1, z2 = torch.split(z, [z.size(1) - z.size(1) // 2, z.size(1) // 2], dim=1)
+        z1, z2 = torch.split(z, [self.unchanged_size, self.changed_size], dim=1)
         x1 = torch.cat([z1, y], dim=1)
-        x2 = (z2 - self.t_net(x1)) / torch.exp(self.scale_net(x1))
+        x2 = (z2 - self.t_net(x1)) / torch.exp(self. a * self.scale_net(x1))
         x = torch.cat([z1, x2], dim=1)
         return x
 
@@ -74,16 +75,17 @@ class RealNVP(nn.Module):
         super(RealNVP, self).__init__()
         self.input_size = input_size
         self.condition_size = condition_size
+        self.n_blocks = blocks
         self.blocks: nn.ModuleList[CouplingBlock] = nn.ModuleList()
-        self.rotation_matrices = []
+        self.rotation_matrices = nn.ParameterList([])
         for i in range(blocks): # blocks -1 
-            self.blocks.append(CouplingBlock(input_size, hidden_size, condition_size))
+            self.blocks.append(CouplingBlock(input_size, hidden_size, condition_size, invert_rounding= i %2 ==0))
             R = get_orthonormal_matrix(input_size)  # R means Rotational matrix,
             # could also be named Q.
             R.requires_grad = False  # prof said its not worth to learn (probably)
             # but it seams to decrease train loss. # but reconstruction is not possible if R becomes not Orthonormal
             self.rotation_matrices.append(R)
-
+        
         #!TODO: readd
         #self.blocks.append(CouplingBlock(input_size, hidden_size, condition_size))
 
@@ -91,17 +93,13 @@ class RealNVP(nn.Module):
         """
         y should be a onehot
         """
-        for block, R in zip(
-            self.blocks, self.rotation_matrices
-        ):  # pyright: ignore[reportAssignmentType]
-            block: CouplingBlock
-            # last from blocks will not be used in this loop
-            x = block.forward(x, y)
-            x = x @ R  # rotation
-        #!TODO: readd
-        # x = self.blocks[-1].forward(x, y)
+        sum_log_det = 0
+        for i in range(self.n_blocks):
+            x,log_det = self.blocks[i].forward(x, y)
+            x = x @ self.rotation_matrices[i]
+            sum_log_det = sum_log_det + log_det
         
-        return x
+        return x , sum_log_det
 
     def reverse(self, z: torch.Tensor, y: torch.Tensor = torch.ones((0,))):
         #!TODO: readd
@@ -142,8 +140,8 @@ class RealNVPSummary(nn.Module):
         x is observation, y is [lam,mu,i0]
         """
         hy = self.summary(y)
-        codes = self.realNVP(x,hy)
-        return codes
+        codes,log_det = self.realNVP.forward(x,hy)
+        return codes, log_det
     def reverse(self,z,y):
         hy = self.summary(y)
         x = self.realNVP.reverse(z,hy)
