@@ -24,3 +24,5 @@ saved_model_*
 nsf_window.pt
 nsf_com_pca_model.pt
 nsf_slidewindow_temporalnetwork.ipynb
+nsf_com_pca_model200epochs.pt
+nsf_window1.pt

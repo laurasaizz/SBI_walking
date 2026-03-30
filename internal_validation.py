@@ -183,16 +183,6 @@ def plot_spatial_trajectory_density(true_com, trajs):
     plt.show()
 
 
-
-#-------------------------PCA-------------------------
-
-
-
-
-
-
-
-
 #-------------PROPER SCORING RULES----------------
 #score for windows, how well does the posterior match the true com? (lower is better)
 def energy_score(samples, y):

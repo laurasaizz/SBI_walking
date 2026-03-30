@@ -474,7 +474,6 @@ class SplineFlow3D(nn.Module):
         self.condition_size = condition_size
 
         self.coupling_blocks = nn.ModuleList()
-        self.linear_blocks = nn.ModuleList()
 
         for i in range(blocks):
             self.coupling_blocks.append(SplineCouplingBlock3D(
@@ -482,23 +481,16 @@ class SplineFlow3D(nn.Module):
                 condition_size=condition_size, num_bins=num_bins,
                 tail_bound=tail_bound, split_idx=i % input_size,
             ))
-            if i < blocks - 1:
-                self.linear_blocks.append(InvertibleLinear(input_size))  
 
     def forward(self, x, y=None):
         total_logdet = torch.zeros(x.shape[0], device=x.device)
         for i, block in enumerate(self.coupling_blocks):
             x = block(x, y)
-            total_logdet += block.block_det                 
-            if i < len(self.linear_blocks):
-                x, ld = self.linear_blocks[i](x)
-                total_logdet += ld                          
+            total_logdet += block.block_det                             
         return x, total_logdet                               
     
     def reverse(self, z, y=None):
-        for i in range(len(self.coupling_blocks) - 1, -1, -1):
-            if i < len(self.linear_blocks):
-                z = self.linear_blocks[i].reverse(z)        
+        for i in range(len(self.coupling_blocks) - 1, -1, -1):       
             z = self.coupling_blocks[i].reverse(z, y)
         return z
 
@@ -531,39 +523,7 @@ class SplineFlowWindow(nn.Module):
     def sample(self, window, n=1):
         return self.flow.sample(n, window)
 
-class SplineFlowWindowEncoder(nn.Module):
-    def __init__(self, window_dim=90, hidden_size=256, blocks=4, num_bins=10, tail_bound=6.0):
-        super().__init__()
-        
-        self.window_encoder = nn.Sequential(
-            nn.Linear(window_dim, 256),
-            nn.ReLU(),
-            nn.Linear(256, 128),
-            nn.ReLU(),
-        )
-        
-        self.flow = SplineFlow3D(
-            input_size=3,
-            hidden_size=hidden_size,
-            blocks=blocks,
-            condition_size=128,
-            num_bins=num_bins,
-            tail_bound=tail_bound,
-        )
-    
-    def forward(self, x, y=None):
-        x_enc = self.window_encoder(x)
-        z = self.flow(y, x_enc)
-        return z
-    
-    def reverse(self, z, x):
-        x_enc = self.window_encoder(x)
-        return self.flow.reverse(z, x_enc)
-    
-    def sample(self, x, n=1):
-        x_enc = self.window_encoder(x)
-        return self.flow.sample(n, x_enc)
-    
+
 import math
 
 def calculate_loss3D(z, logdet):
