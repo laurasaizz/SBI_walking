@@ -143,6 +143,7 @@ class RealNVPSummary(nn.Module):
         s_layers=6,
         r_hidden=500,
         r_blocks=6,
+        p_drop = 0.1,
         *args,
         **kwargs
     ):
@@ -152,7 +153,7 @@ class RealNVPSummary(nn.Module):
             hidden_size=s_hidden,
             layers=s_layers,
             output_size=reduced_condition_size,
-            p_drop=0.1
+            p_drop=p_drop
         )
         self.realNVP = RealNVP(
             input_size=input_size,
